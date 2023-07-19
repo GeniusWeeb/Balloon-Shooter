@@ -79,7 +79,7 @@ namespace BallLine
         int oldBallNumber = 100;
         int i = 0;
 
-        bool hasStop;
+     [SerializeField]   bool hasStop;
         bool isFirstBall;
         bool isFirstShootBall = true;
         bool isCreateBall;
@@ -313,7 +313,7 @@ namespace BallLine
             DrawPredictedReflectionPattern(position, direction, reflectionsRemaining - 1, hasReflect);
         }
 
-        int count = 0;
+     [SerializeField]   int count = 0;
 
         IEnumerator SpawnBall()
         {
@@ -334,8 +334,8 @@ namespace BallLine
             }
             count++;
             CreateBall();
-//            if(count<4)
             StartCoroutine(SpawnBall());
+          
         }
 
         void CreateBall()
@@ -634,6 +634,8 @@ namespace BallLine
         }
 
         // Calls this when the player dies and game over
+        
+        [ContextMenu("Force Death")]
         public void Die()
         {
             if (!isDie)
