@@ -25,7 +25,7 @@ namespace BallLine
 
         int currentID;
 
-        private int currentCharacterID;
+      [SerializeField]  private int currentCharacterID;
 
         void Awake()
         {
@@ -38,6 +38,8 @@ namespace BallLine
             PoolingObject(currentCharacterID);
         }
 
+        
+        //Note : Pooling and creating the pool , this is pre game , this value can be altered
         public void PoolingObject(int packageID)
         {
             pooledObjects = new List<GameObject>();
@@ -71,7 +73,7 @@ namespace BallLine
                     return pooledObjects[i];
                 }
             }
-            foreach (ObjectPoolItem item in poolObject[1].itemsToPool)
+            foreach (ObjectPoolItem item in poolObject[Random.Range(1,9)].itemsToPool)
             {
                 if (item.objectToPool.tag == tag)
                 {
