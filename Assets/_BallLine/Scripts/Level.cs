@@ -8,6 +8,7 @@ namespace BallLine
         public string levelName;
         public int price;
         public bool isFree = false;
+        [SerializeField] private PerLevelDataManager thisLevelManager; 
         //***uncomment the cobe below to use pass level when enough score feature
 
         //public int scoreToPass = 200;

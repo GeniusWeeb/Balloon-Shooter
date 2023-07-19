@@ -12,7 +12,12 @@ namespace BallLine
 {
     public class UIManager : MonoBehaviour
     {
+        public static UIManager Instance;
+        
         [Header("Object References")]
+        public GameObject LevelChooseUI;
+
+        public GameObject LevelChooseBtn;
         public GameObject mainCanvas;
         public GameObject characterSelectionUI;
         public GameObject btnSelectCharacter;
@@ -58,6 +63,12 @@ namespace BallLine
         bool isWatchAdsForCoinBtnActive;
         string currentTab = "Character";
         Color originalColor;
+
+
+        private void Awake()
+        {
+            Instance = this;
+        }
 
         void OnEnable()
         {
@@ -165,6 +176,14 @@ namespace BallLine
         public void StartGame()
         {
             GameManager.Instance.StartGame();
+        }
+
+
+        public void ShowChooseLevelUI()
+        {
+           LevelChooseUI.SetActive(true);
+           LevelChooseBtn.SetActive(false);
+          
         }
 
         public void EndGame()
