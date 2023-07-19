@@ -4745,6 +4745,7 @@ MonoBehaviour:
   levelName: LEVEL3
   price: 200
   isFree: 1
+  thisLevelManager: {fileID: 11400000, guid: cea6ec800d038435b9d97271aec35165, type: 2}
 --- !u!1 &1952650568587680
 GameObject:
   m_ObjectHideFlags: 0

@@ -2014,6 +2014,7 @@ MonoBehaviour:
   levelName: LEVEL11
   price: 900
   isFree: 0
+  thisLevelManager: {fileID: 11400000, guid: cea6ec800d038435b9d97271aec35165, type: 2}
 --- !u!1 &3264168102768302781
 GameObject:
   m_ObjectHideFlags: 0
