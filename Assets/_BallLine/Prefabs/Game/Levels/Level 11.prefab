@@ -2013,7 +2013,7 @@ MonoBehaviour:
   levelSequenceNumber: 10
   levelName: LEVEL11
   price: 900
-  isFree: 1
+  isFree: 0
 --- !u!1 &3264168102768302781
 GameObject:
   m_ObjectHideFlags: 0
@@ -4934,7 +4934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 839b31e674d2e0a40bda066e805686d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  takeScreenShot: 1
+  takeScreenShot: 0
   rayColor: {r: 1, g: 1, b: 1, a: 1}
   pathObjects:
   - {fileID: 3262509902226170987}
