@@ -497,16 +497,28 @@ namespace BallLine
         // Listens to changes in game state
         void OnGameStateChanged(GameState newState, GameState oldState)
         {
-            if (newState == GameState.Playing)
+            switch (newState)
             {
-                Time.fixedDeltaTime = 1.0f / 120;
-                isFirstBall = true;
-                createBallSpeed = (0.05f / GameManager.Instance.speedUp);
-                GameManager.Instance.GetComponent<GameManager>().SpeedUp();
-                StartSpawnBall();
-                speed = GameManager.Instance.shootBallSpeed;
-                // Do whatever necessary when a new game starts
-            }      
+                case GameState.Playing :
+                    Time.fixedDeltaTime = 1.0f / 120;
+                    isFirstBall = true;
+                    createBallSpeed = (0.05f / GameManager.Instance.speedUp);
+                    GameManager.Instance.GetComponent<GameManager>().SpeedUp();
+                    StartSpawnBall();
+                    speed = GameManager.Instance.shootBallSpeed;
+                    break;
+                case GameState.Prepare:
+                    break;
+                case GameState.Paused:
+                    break;
+                case GameState.PreGameOver:
+                    break;
+                case GameState.GameOver:
+                   
+                    break;
+                }
+            
+            
         }
 
 

@@ -18,6 +18,10 @@ namespace BallLine
         public GameObject LevelChooseUI;
 
         public GameObject LevelChooseBtn;
+
+
+        public GameObject playNextLevelUI;
+        
         public GameObject mainCanvas;
         public GameObject characterSelectionUI;
         public GameObject btnSelectCharacter;

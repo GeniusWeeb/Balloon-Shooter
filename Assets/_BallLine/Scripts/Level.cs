@@ -1,9 +1,12 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace BallLine
 {
     public class Level : MonoBehaviour
     {
+        public static Action<GameObject> levelInitEvent;
+        
         public int levelSequenceNumber;
         public string levelName;
         public int price;
@@ -29,6 +32,7 @@ namespace BallLine
         void Awake()
         {
             AddLevelData();
+            levelInitEvent.Invoke(this.gameObject);
             
         }
 

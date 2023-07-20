@@ -64,6 +64,16 @@ namespace BallLine
             {
                 HasNewHighScore = false;
             }
+
+            CheckWinCondition();
+        }
+
+        private void  CheckWinCondition()
+        {
+            if (Score > GameManager.Instance.currentPlayingLevel.scoreToWin)
+            {
+                GameManager.GameOverWithResult.Invoke(GameResult.WIN);
+            } 
         }
 
         public void UpdateHighScore(int newHighScore)
@@ -76,5 +86,7 @@ namespace BallLine
                 HighscoreUpdated(HighScore);
             }
         }
+
+     
     }
 }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.SceneManagement;
@@ -14,6 +15,13 @@ namespace BallLine
         GameOver
     }
 
+    public enum GameResult
+    {
+        WIN ,
+        LOSE ,
+        NUlL
+    }
+
     public enum CoinEarned
     {
         OnceCombo,
@@ -25,8 +33,12 @@ namespace BallLine
     {
 
         [Header("Current Level")] public int currentLevelIndex;
-        public static GameManager Instance { get; private set; }
+        public Level currentPlayingLevel;
+
+        public GameResult currentGameResult;
         
+        public static GameManager Instance { get; private set; }
+            
         public static event System.Action<GameState, GameState> GameStateChanged;
         [Header("Gameplay Config")]
 
@@ -37,9 +49,15 @@ namespace BallLine
             get { return screenShootPath; }
         }
 
+        #region  events
+
+        public static  Action<GameResult> GameOverWithResult;
+
+        #endregion
+        
         [Range(0f, 1f)]
         public float coinFrequency = 0.1f;
-
+    
         public Color selectShadowColor = Color.green;
         public Color normalShadowColor = Color.black;
         public Color selectTextColor = Color.yellow;
@@ -120,12 +138,23 @@ namespace BallLine
 
         void OnEnable()
         {
+            GameOverWithResult += CheckGameWinLoss;
             PlayerController.PlayerDied += PlayerController_PlayerDied;
+            Level.levelInitEvent += AssignCurrentLevel;
+            
         }
 
+       private void AssignCurrentLevel(GameObject level)
+       {
+           currentPlayingLevel = level.GetComponent<Level>();
+       
+       }
+
         void OnDisable()
-        {
+        {   
+            GameOverWithResult -= CheckGameWinLoss;
             PlayerController.PlayerDied -= PlayerController_PlayerDied;
+            Level.levelInitEvent -= AssignCurrentLevel;
         }
 
         void Awake()
@@ -158,21 +187,27 @@ namespace BallLine
             PrepareGame();
         }
 
+        private void CheckGameWinLoss(GameResult result)
+        {
+            currentGameResult = result;
+            if (currentGameResult == GameResult.WIN)
+            {
+                Debug.LogError("You win");
+            }
+            else
+            {  
+                Debug.LogError("You lose");
+
+            }
+
+        }
+
+
         // Update is called once per frame
-        void Update()
-        {
-        }
-
-      
-
-        public void CheckWinCondition()
-        {
-            
-        }
-
         // Listens to the event when player dies and call GameOver
         void PlayerController_PlayerDied()
         {
+            CheckGameWinLoss(GameResult.LOSE);
             GameOver();
         }
 
@@ -214,6 +249,12 @@ namespace BallLine
             GameCount++;
 
             // Add other game over actions here if necessary
+        }
+
+
+        public void OnGameWinOve(GameResult result)
+        {
+            currentGameResult = result;
         }
 
         // Start a new game

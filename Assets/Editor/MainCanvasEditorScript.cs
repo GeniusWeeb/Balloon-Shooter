@@ -12,7 +12,7 @@ using UnityEngine;
 [CustomEditor(typeof(UIManager))]
 public class MainCanvasEditorScript : Editor
 {
-   
+  
 
     public override void OnInspectorGUI()
     {
@@ -22,6 +22,8 @@ public class MainCanvasEditorScript : Editor
         
         if(GUILayout.Button("End game"))
             uiManager.EndGame();
+        
+      
             
     }
 }

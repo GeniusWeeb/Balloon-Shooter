@@ -24,7 +24,7 @@ MonoBehaviour:
     levelTimerInSeconds: 0
     levelCoinReward: 250
   - levelNumber: 3
-    scoreToWin: 300
+    scoreToWin: 3
     gameSpeed: 1
     levelTimerInSeconds: 0
     levelCoinReward: 310
