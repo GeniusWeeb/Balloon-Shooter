@@ -26,7 +26,7 @@ namespace BallLine
 
         void Start()
         {
-            originalDistance = transform.position - playerTransform.transform.position;
+         //   originalDistance = transform.position - playerTransform.transform.position;
         }
 
         void Update()

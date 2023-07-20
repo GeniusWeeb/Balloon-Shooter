@@ -1,0 +1,234 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2957127496902929853
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2957127496902929851}
+  - component: {fileID: 2957127496902929852}
+  - component: {fileID: 2957127496902929850}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: GameManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2957127496902929851
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2957127496902929853}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2957127496902929852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2957127496902929853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db41cfb3e07db6a41b74dca8bf271fdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLevelIndex: 0
+  currentPlayingLevel: {fileID: 0}
+  currentGameResult: 2
+  screenShootPath: Assets/_BallLine/ScreenShot/
+  coinFrequency: 0.1
+  selectShadowColor: {r: 0.1475995, g: 0.9558824, b: 0.28695866, a: 1}
+  normalShadowColor: {r: 0, g: 0, b: 0, a: 0.5019608}
+  selectTextColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  normalTextColor: {r: 1, g: 1, b: 1, a: 1}
+  moveBallSpeed: 2
+  shootBallSpeed: 50
+  createBombBallAtComboScore: 1
+  bombBallExplosionRadius: 2.5
+  speedUp: 40
+  distanceFromCamera: 15.8911
+  moveBackSpeed: 15
+  timeSpeedUp: 1
+  monetizationOptions: 2
+  earnCoinAtComboScore: 1
+  coinEarned: 1
+  amountCoinIncrease: 1
+  backgroundMessage: Do you want to unlock this background?
+  levelMessage: Do you want to unlock this level?
+  characterMessage: Do you want to unlock this model?
+  targetFrameRate: 60
+  _gameState: 0
+  playerController: {fileID: 0}
+  mainCanvas: {fileID: 0}
+  characterUI: {fileID: 0}
+--- !u!114 &2957127496902929850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2957127496902929853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a037060346cadd44cbd4c11ae073e8dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolObject:
+  - itemsToPool:
+    - objectToPool: {fileID: 1319389460315482, guid: 626bc7cd757caa348b57449ed01aaf7c,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+    - objectToPool: {fileID: 1584580055886416, guid: f7368ce5d9a10934dad7b78f25fa9adf,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+    - objectToPool: {fileID: 1321131090919124, guid: a31b822099dff0a4ea2b4da36592d874,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+  - itemsToPool:
+    - objectToPool: {fileID: 1140658788273406, guid: 245b71ab305cc2b4f96a1d7b6b05b8af,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+    - objectToPool: {fileID: 1609300221279354, guid: 61dfbc5510bbe494a827502e1b2ad124,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+    - objectToPool: {fileID: 1176390760095094, guid: ad4bfb6dbeef9b8408bd95dd6e16ce1b,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+  - itemsToPool:
+    - objectToPool: {fileID: 1005548047760308, guid: def5c3d1285b408409f32f2da4c83c07,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+    - objectToPool: {fileID: 1320057427383308, guid: bdae8c364c1b9384daf05e02c4121ef5,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+    - objectToPool: {fileID: 1954456023148254, guid: d15edd546b5929943ae0a964446c8cf8,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+  - itemsToPool:
+    - objectToPool: {fileID: 1531729108523238, guid: 7d91946e386acf24092b1f4449847a82,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+    - objectToPool: {fileID: 1719964714747600, guid: 6ee0df9040ee2db4baa9e29aba86bd9c,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+    - objectToPool: {fileID: 1749960765784244, guid: ad417ab149bd4cf4285ef76158c845d7,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+  - itemsToPool:
+    - objectToPool: {fileID: 1413157848769246, guid: 2541f91e0f955144b85ddcc74fda9976,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+    - objectToPool: {fileID: 1904571626046706, guid: 40b99886a11dcb045a359cc14a96bf15,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+    - objectToPool: {fileID: 1730079710953082, guid: dd5239420a72eb743a8c0444494baea1,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+  - itemsToPool:
+    - objectToPool: {fileID: 1303437619994146, guid: 08ebbf018569fe349b401adca499fd01,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+    - objectToPool: {fileID: 1722292138699618, guid: fca5050cd54449b4c9c71cad9b7f7dbc,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+    - objectToPool: {fileID: 1302024745565722, guid: 773fb0bd807ea3b4582a23f99f6da4a6,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+  - itemsToPool:
+    - objectToPool: {fileID: 1564298024420532, guid: fd31296c7c4dbf3489dae6f729283b0c,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+    - objectToPool: {fileID: 1881422940524672, guid: 9eeab1a47680e8544aa52e9dc7eb1118,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+    - objectToPool: {fileID: 1347496933888558, guid: e112bbb200766d442b24c5dba3e64612,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+  - itemsToPool:
+    - objectToPool: {fileID: 1078413536244182, guid: ee162219a0e87e9418a78a808ee4ab59,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+    - objectToPool: {fileID: 1232617142065500, guid: 4154f7aed53f2a84499446cf025e4886,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+    - objectToPool: {fileID: 1250924052322752, guid: 2c36a9bfdaa2625419479e233c728f63,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+  - itemsToPool:
+    - objectToPool: {fileID: 1845660982662600, guid: 777947f92ff83e844963228f65fefba4,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+    - objectToPool: {fileID: 1547943567681676, guid: 9d1d793e326c89e4fbd3cc646c02e69f,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+    - objectToPool: {fileID: 1104412840323908, guid: bf3acb48eef01164381e1d4b319f7eb0,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+  - itemsToPool:
+    - objectToPool: {fileID: 1767774863682498, guid: a7fcdbcfc66e917428cd53d76c5bc560,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+    - objectToPool: {fileID: 1985431091734692, guid: 4ad5e76055ac4d141a065ee5e3304a7a,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+    - objectToPool: {fileID: 1091058361531540, guid: ed882865f83b09c40ada3b2da99865f6,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+  - itemsToPool:
+    - objectToPool: {fileID: 1292304381854256, guid: 35083a4fdfd60fa458b673a59e128372,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+    - objectToPool: {fileID: 1001011785512482, guid: 0eace2afdc2cb7f4b8509828c2b55cf0,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+    - objectToPool: {fileID: 1031787151970730, guid: c91c0c323ece9db46a08cecd08199bc4,
+        type: 3}
+      shouldExpand: 1
+      amountToPool: 50
+  pooledObjects: []
+  currentCharacterID: 0

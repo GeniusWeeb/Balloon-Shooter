@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level:
   - levelNumber: 1
-    scoreToWin: 150
+    scoreToWin: 5
     gameSpeed: 0
     levelTimerInSeconds: 0
     levelCoinReward: 0
   - levelNumber: 2
-    scoreToWin: 200
+    scoreToWin: 5
     gameSpeed: 0
     levelTimerInSeconds: 0
     levelCoinReward: 250

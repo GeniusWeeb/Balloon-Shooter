@@ -188,6 +188,7 @@ namespace BallLine
             
             Application.targetFrameRate = targetFrameRate;
             ScoreManager.Instance.Reset();
+            Debug.LogError("Starting game");
             PrepareGame();
         }
 
@@ -201,6 +202,8 @@ namespace BallLine
                 speedUp = 10f;
                 playerController.StartSpeedUp();
                 GameOver();
+                playerController.isPlay = false;
+
             }
             else
             {  
@@ -231,10 +234,14 @@ namespace BallLine
             {
                 isRestart = false;
                 StartGame();
+                return;
             }
+            StartGame();
         }
 
         // A new game official starts
+        
+        [ContextMenu("Start Game")]
         public void StartGame()
         {
           
@@ -334,15 +341,20 @@ namespace BallLine
            
         }
         public void PlayNextLevel()
-        {
+        {   
             if (playerController.levelSetupDone)
             {
                 Debug.LogError("Setup Is Done");
-                currentPooledObjects.DestroyPoolObject();
-                currentPooledObjects.PoolingObject(CharacterManager.Instance.CurrentCharacterIndex);
+             
                 StartCoroutine(SampleDelay(1f));
                 UIManager.Instance.playNextLevelUI.SetActive(false);
-               
+                playerController.instantiateNewLevel(currentPlayingLevel.levelSequenceNumber+1);
+                LevelManager.Instance.CurrentLevelIndex = currentPlayingLevel.levelSequenceNumber + 1;
+
+                SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+
+
+
             }
         }
     }

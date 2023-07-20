@@ -89,9 +89,9 @@ namespace BallLine
         // Use this for initialization
         void Start()
         {
-            originalColor = GameManager.Instance.selectTextColor;
+           // originalColor = GameManager.Instance.selectTextColor;
             scoreAnimator = score.GetComponent<Animator>();
-            dailyRewardAnimator = dailyRewardBtn.GetComponent<Animator>();
+       //     dailyRewardAnimator = dailyRewardBtn.GetComponent<Animator>();
 
             Reset();
             ShowStartUI();
@@ -104,20 +104,20 @@ namespace BallLine
             bestScore.text = ScoreManager.Instance.HighScore.ToString();
             coinText.text = CoinManager.Instance.Coins.ToString();
 
-            if (!DailyRewardController.Instance.disable && dailyRewardBtn.gameObject.activeInHierarchy)
-            {
-                if (DailyRewardController.Instance.CanRewardNow())
-                {
-                    dailyRewardBtnText.text = "GRAB YOUR REWARD!";
-                    dailyRewardAnimator.SetTrigger("activate");
-                }
-                else
-                {
-                    TimeSpan timeToReward = DailyRewardController.Instance.TimeUntilReward;
-                    dailyRewardBtnText.text = string.Format("REWARD IN {0:00}:{1:00}:{2:00}", timeToReward.Hours, timeToReward.Minutes, timeToReward.Seconds);
-                    dailyRewardAnimator.SetTrigger("deactivate");
-                }
-            }
+            // if (!DailyRewardController.Instance.disable && dailyRewardBtn.gameObject.activeInHierarchy)
+            // {
+            //     if (DailyRewardController.Instance.CanRewardNow())
+            //     {
+            //         dailyRewardBtnText.text = "GRAB YOUR REWARD!";
+            //         dailyRewardAnimator.SetTrigger("activate");
+            //     }
+            //     else
+            //     {
+            //         TimeSpan timeToReward = DailyRewardController.Instance.TimeUntilReward;
+            //         dailyRewardBtnText.text = string.Format("REWARD IN {0:00}:{1:00}:{2:00}", timeToReward.Hours, timeToReward.Minutes, timeToReward.Seconds);
+            //         dailyRewardAnimator.SetTrigger("deactivate");
+            //     }
+            // }
 
             if (settingsUI.activeSelf)
             {
@@ -180,7 +180,8 @@ namespace BallLine
 
         public void StartGame()
         {
-            GameManager.Instance.StartGame();
+
+            SceneManager.LoadSceneAsync("SGameplay");
             LevelChooseBtn.SetActive(false);
         }
 
@@ -210,16 +211,8 @@ namespace BallLine
 
         public void ShowStartUI()
         {
-            settingsUI.SetActive(false);
-
-            header.SetActive(true);
-            title.SetActive(true);
-            playBtn.SetActive(true);
-            restartBtn.SetActive(false);
-            menuButtons.SetActive(true);
-            shareBtn.SetActive(false);
-
-            // If first launch: show "WatchForCoins" and "DailyReward" buttons if the conditions are met
+            CheckUIToShow();
+           // If first launch: show "WatchForCoins" and "DailyReward" buttons if the conditions are met
             if (GameManager.GameCount == 0)
             {
                 ShowWatchForCoinsBtn();
@@ -229,13 +222,34 @@ namespace BallLine
 
         public void ShowGameUI()
         {
-            header.SetActive(true);
-            title.SetActive(false);
-            score.gameObject.SetActive(true);
-            playBtn.SetActive(false);
-            menuButtons.SetActive(false);
-            dailyRewardBtn.SetActive(false);
-            watchRewardedAdBtn.SetActive(false);
+            CheckUIToShow();
+        }
+
+
+        void CheckUIToShow()
+        {
+            string CurrentActiveScene = SceneManager.GetActiveScene().name;
+            switch (CurrentActiveScene)
+            {
+                case "Main":
+                    header.SetActive(true);
+                    title.SetActive(true);
+                    playBtn.SetActive(true);
+                    menuButtons.SetActive(true);
+                    dailyRewardBtn.SetActive(true);
+                    watchRewardedAdBtn.SetActive(true);
+                    break;
+                case "SGameplay":
+                    Debug.LogError("Showing Gameplay UI");
+                    score.gameObject.SetActive(true);
+                    header.SetActive(true);
+                    playBtn.SetActive(false);
+                    menuButtons.SetActive(false);
+                    dailyRewardBtn.SetActive(false);
+                    watchRewardedAdBtn.SetActive(false);
+                    
+                    break;
+            }
         }
 
         public void ShowGameOverUI()
@@ -244,7 +258,6 @@ namespace BallLine
             title.SetActive(false);
             score.gameObject.SetActive(true);
             newBestScore.SetActive(ScoreManager.Instance.HasNewHighScore);
-
             playBtn.SetActive(false);
             restartBtn.SetActive(true);
             menuButtons.SetActive(true);
