@@ -199,11 +199,10 @@ namespace BallLine
             {
                 Debug.LogError("You win");
                 UIManager.Instance.playNextLevelUI.SetActive(true);
-                speedUp = 10f;
+                speedUp = 200f;
                 playerController.StartSpeedUp();
                 GameOver();
                 playerController.isPlay = false;
-
             }
             else
             {  
@@ -349,7 +348,7 @@ namespace BallLine
                 StartCoroutine(SampleDelay(1f));
                 UIManager.Instance.playNextLevelUI.SetActive(false);
                 playerController.instantiateNewLevel(currentPlayingLevel.levelSequenceNumber+1);
-                LevelManager.Instance.CurrentLevelIndex = currentPlayingLevel.levelSequenceNumber + 1;
+                LevelManager.Instance.CurrentLevelIndex = currentPlayingLevel.levelSequenceNumber;
 
                 SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
 

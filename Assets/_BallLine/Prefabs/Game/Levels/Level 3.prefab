@@ -4744,7 +4744,11 @@ MonoBehaviour:
   levelSequenceNumber: 2
   levelName: LEVEL3
   price: 200
-  isFree: 1
+  isFree: 0
+  scoreToWin: 0
+  levelSpeed: 0
+  levelTimerInSeconds: 0
+  levelCoinRewards: 0
   thisLevelManager: {fileID: 11400000, guid: cea6ec800d038435b9d97271aec35165, type: 2}
 --- !u!1 &1952650568587680
 GameObject:

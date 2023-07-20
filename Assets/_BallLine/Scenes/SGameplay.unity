@@ -9730,6 +9730,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224835628023629344, guid: bdc8005ad6da2ed4ab47962a83aab172,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224835628023629344, guid: bdc8005ad6da2ed4ab47962a83aab172,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224835628023629344, guid: bdc8005ad6da2ed4ab47962a83aab172,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224835628023629344, guid: bdc8005ad6da2ed4ab47962a83aab172,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 224971518069657788, guid: bdc8005ad6da2ed4ab47962a83aab172,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -9775,6 +9795,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4048176390446191668, guid: bdc8005ad6da2ed4ab47962a83aab172,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4300069159830608624, guid: bdc8005ad6da2ed4ab47962a83aab172,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -9810,6 +9835,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5170325803480959432, guid: bdc8005ad6da2ed4ab47962a83aab172,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170325803480959432, guid: bdc8005ad6da2ed4ab47962a83aab172,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170325803480959432, guid: bdc8005ad6da2ed4ab47962a83aab172,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170325803480959432, guid: bdc8005ad6da2ed4ab47962a83aab172,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5547164064810811569, guid: bdc8005ad6da2ed4ab47962a83aab172,
         type: 3}
       propertyPath: m_IsActive
@@ -9820,6 +9865,24 @@ PrefabInstance:
 --- !u!1 &2700173992571738102 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4947706086949794757, guid: bdc8005ad6da2ed4ab47962a83aab172,
+    type: 3}
+  m_PrefabInstance: {fileID: 2700173992571738101}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2700173992571738103 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4048176390446191668, guid: bdc8005ad6da2ed4ab47962a83aab172,
+    type: 3}
+  m_PrefabInstance: {fileID: 2700173992571738101}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2700173992571738104 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2390116930760364766, guid: bdc8005ad6da2ed4ab47962a83aab172,
+    type: 3}
+  m_PrefabInstance: {fileID: 2700173992571738101}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2700173992571738105 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4287511686911981642, guid: bdc8005ad6da2ed4ab47962a83aab172,
     type: 3}
   m_PrefabInstance: {fileID: 2700173992571738101}
   m_PrefabAsset: {fileID: 0}
@@ -10027,9 +10090,19 @@ PrefabInstance:
       objectReference: {fileID: 1372011434}
     - target: {fileID: 4832591235028430720, guid: 5518b79e56eb341faae7b663c6821568,
         type: 3}
+      propertyPath: winText
+      value: 
+      objectReference: {fileID: 2700173992571738105}
+    - target: {fileID: 4832591235028430720, guid: 5518b79e56eb341faae7b663c6821568,
+        type: 3}
       propertyPath: coinText
       value: 
       objectReference: {fileID: 610080124}
+    - target: {fileID: 4832591235028430720, guid: 5518b79e56eb341faae7b663c6821568,
+        type: 3}
+      propertyPath: loseText
+      value: 
+      objectReference: {fileID: 2700173992571738104}
     - target: {fileID: 4832591235028430720, guid: 5518b79e56eb341faae7b663c6821568,
         type: 3}
       propertyPath: rewardUI
@@ -10100,6 +10173,11 @@ PrefabInstance:
       propertyPath: LevelChooseUI
       value: 
       objectReference: {fileID: 2700173992571738102}
+    - target: {fileID: 4832591235028430720, guid: 5518b79e56eb341faae7b663c6821568,
+        type: 3}
+      propertyPath: gameOverPopUp
+      value: 
+      objectReference: {fileID: 2700173992571738103}
     - target: {fileID: 4832591235028430720, guid: 5518b79e56eb341faae7b663c6821568,
         type: 3}
       propertyPath: LevelChooseBtn

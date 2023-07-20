@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 using System;
+using TMPro ;
 
 #if EASY_MOBILE
 using EasyMobile;
@@ -18,7 +19,9 @@ namespace BallLine
         public GameObject LevelChooseUI;
 
         public GameObject LevelChooseBtn;
-
+        public GameObject winText; 
+        public GameObject loseText;
+        public GameObject gameOverPopUp;
 
         public GameObject playNextLevelUI;
         
@@ -223,6 +226,7 @@ namespace BallLine
         public void ShowGameUI()
         {
             CheckUIToShow();
+
         }
 
 
@@ -254,6 +258,11 @@ namespace BallLine
 
         public void ShowGameOverUI()
         {
+            gameOverPopUp.SetActive(true);
+            if (GameManager.Instance.currentGameResult == GameResult.WIN)
+                winText.gameObject.SetActive(true);
+            else
+                loseText.gameObject.SetActive(true);
             header.SetActive(true);
             title.SetActive(false);
             score.gameObject.SetActive(true);
@@ -262,7 +271,6 @@ namespace BallLine
             restartBtn.SetActive(true);
             menuButtons.SetActive(true);
             settingsUI.SetActive(false);
-
             // Show 'daily reward' button
             ShowDailyRewardBtn();
 
