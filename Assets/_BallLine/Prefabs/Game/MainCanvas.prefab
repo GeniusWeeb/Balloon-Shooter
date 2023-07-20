@@ -35,7 +35,7 @@ RectTransform:
   - {fileID: 224905752884645880}
   - {fileID: 224707853954182140}
   m_Father: {fileID: 224785994664956606}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1728,7 +1728,6 @@ RectTransform:
   m_Children:
   - {fileID: 224971518069657788}
   - {fileID: 224370441536190380}
-  - {fileID: 224922482692730764}
   - {fileID: 224883638400080984}
   - {fileID: 224143589326502788}
   - {fileID: 224074319557131078}
@@ -1741,6 +1740,7 @@ RectTransform:
   - {fileID: 3620969376253449617}
   - {fileID: 4065288074332281171}
   - {fileID: 5200158761159110258}
+  - {fileID: 224922482692730764}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3111,7 +3111,7 @@ RectTransform:
   m_Children:
   - {fileID: 224981787641290968}
   m_Father: {fileID: 224785994664956606}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -3291,7 +3291,7 @@ RectTransform:
   m_Children:
   - {fileID: 224284817281724458}
   m_Father: {fileID: 224785994664956606}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -4029,7 +4029,7 @@ RectTransform:
   - {fileID: 224449956825139702}
   - {fileID: 224368655263715258}
   m_Father: {fileID: 224785994664956606}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -6273,7 +6273,7 @@ RectTransform:
   m_Children:
   - {fileID: 224645320947684902}
   m_Father: {fileID: 224785994664956606}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -7464,7 +7464,7 @@ RectTransform:
   m_Children:
   - {fileID: 224049527130844012}
   m_Father: {fileID: 224785994664956606}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -7556,7 +7556,7 @@ RectTransform:
   m_Children:
   - {fileID: 224084006000692534}
   m_Father: {fileID: 224785994664956606}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -7659,7 +7659,7 @@ RectTransform:
   - {fileID: 224160872709718460}
   - {fileID: 224718064116407304}
   m_Father: {fileID: 224785994664956606}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -7915,7 +7915,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 224785994664956606}
-  m_RootOrder: 2
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -9401,7 +9401,7 @@ RectTransform:
   - {fileID: 3984957350465855735}
   - {fileID: 7275286555510556155}
   m_Father: {fileID: 224785994664956606}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -9616,7 +9616,7 @@ RectTransform:
   - {fileID: 3179821894662676973}
   - {fileID: 133463963982345646}
   m_Father: {fileID: 224785994664956606}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -9709,7 +9709,7 @@ RectTransform:
   m_Children:
   - {fileID: 1081385176944335762}
   m_Father: {fileID: 224785994664956606}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10431,7 +10431,7 @@ PrefabInstance:
     - target: {fileID: 224574985974583406, guid: eb75309886f28435eb2eb72850cc845f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224574985974583406, guid: eb75309886f28435eb2eb72850cc845f,
         type: 3}

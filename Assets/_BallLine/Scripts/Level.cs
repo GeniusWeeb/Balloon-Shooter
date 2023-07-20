@@ -76,7 +76,7 @@ namespace BallLine
             {
                 PlayerPrefs.SetInt(levelName, 1);
                 PlayerPrefs.Save();
-                CoinManager.Instance.RemoveCoins(price);
+               // CoinManager.Instance.RemoveCoins(price);
                 var levelNo= levelSequenceNumber + 1;
                 Debug.LogError(" unlocked NEW LEVEL  " + levelNo);
                 //levelName =  "LEVEL" + sequence number
