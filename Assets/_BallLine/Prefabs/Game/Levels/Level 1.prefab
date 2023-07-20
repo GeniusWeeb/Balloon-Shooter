@@ -4135,7 +4135,7 @@ MonoBehaviour:
   levelSequenceNumber: 0
   levelName: LEVEL1
   price: 0
-  isFree: 0
+  isFree: 1
   scoreToWin: 0
   levelSpeed: 0
   levelTimerInSeconds: 0
