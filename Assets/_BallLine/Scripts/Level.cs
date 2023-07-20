@@ -46,10 +46,17 @@ namespace BallLine
 
         private void Start()
         {
+            Init();
+        }
+
+
+        void Init()
+        {
             if (levelSequenceNumber == 0)
             {
                 isUnlockedAndPlayable = true;
                 isFree = true;
+                Unlock(false, true);
             }
             
             if(IsUnlocked)

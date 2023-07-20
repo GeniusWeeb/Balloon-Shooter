@@ -361,8 +361,9 @@ namespace BallLine
         private void AutoUnlockNewLevel()
         {
             LevelManager.Instance.Levels[currentPlayingLevel.levelSequenceNumber + 1].GetComponent<Level>().Unlock(false , true);
+            LevelManager.Instance.CurrentLevelIndex = currentPlayingLevel.levelSequenceNumber+1;
             // After you win , unlock new level 
-        
+
         }
 
 
