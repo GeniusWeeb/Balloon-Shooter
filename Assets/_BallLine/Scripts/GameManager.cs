@@ -23,8 +23,10 @@ namespace BallLine
 
     public class GameManager : MonoBehaviour
     {
-        public static GameManager Instance { get; private set; }
 
+        [Header("Current Level")] public int currentLevelIndex;
+        public static GameManager Instance { get; private set; }
+        
         public static event System.Action<GameState, GameState> GameStateChanged;
         [Header("Gameplay Config")]
 
@@ -153,13 +155,19 @@ namespace BallLine
             // Initial setup
             Application.targetFrameRate = targetFrameRate;
             ScoreManager.Instance.Reset();
-
             PrepareGame();
         }
 
         // Update is called once per frame
         void Update()
         {
+        }
+
+      
+
+        public void CheckWinCondition()
+        {
+            
         }
 
         // Listens to the event when player dies and call GameOver
@@ -189,6 +197,8 @@ namespace BallLine
             {
                 SoundManager.Instance.PlayMusic(SoundManager.Instance.background);
             }
+
+            currentLevelIndex = LevelManager.Instance.CurrentLevelIndex +1 ;
         }
 
         // Called when the player died

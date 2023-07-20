@@ -21,9 +21,10 @@ public class PerLevelDataManager : ScriptableObject
 [System.Serializable]
 public class levelParameters
 {
-    public string levelNumber;
+    public int levelNumber;
     public int scoreToWin;
     public float gameSpeed;
-    public float levelTimerInSeconds; 
+    public float levelTimerInSeconds;
+    public int levelCoinReward;
 
 }

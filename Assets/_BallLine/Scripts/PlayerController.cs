@@ -1,13 +1,15 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 namespace BallLine
 {
     public class PlayerController : MonoBehaviour
     {
-
+        public static PlayerController Instance;
 
         #region Events need to be moved to a diff file 
             public static event System.Action PlayerDied;
@@ -85,6 +87,12 @@ namespace BallLine
         bool isCreateBall;
         bool canShoot = true;
         bool isScaleUp = false;
+
+
+        private void Awake()
+        {
+            Instance = this;
+        }
 
         void OnEnable()
         {

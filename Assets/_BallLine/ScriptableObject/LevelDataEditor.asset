@@ -13,43 +13,53 @@ MonoBehaviour:
   m_Name: LevelDataEditor
   m_EditorClassIdentifier: 
   level:
-  - levelNumber: LEVEL1
+  - levelNumber: 1
     scoreToWin: 150
     gameSpeed: 0
     levelTimerInSeconds: 0
-  - levelNumber: 
+    levelCoinReward: 0
+  - levelNumber: 2
+    scoreToWin: 200
+    gameSpeed: 0
+    levelTimerInSeconds: 0
+    levelCoinReward: 250
+  - levelNumber: 3
+    scoreToWin: 300
+    gameSpeed: 1
+    levelTimerInSeconds: 0
+    levelCoinReward: 310
+  - levelNumber: 0
     scoreToWin: 0
     gameSpeed: 0
     levelTimerInSeconds: 0
-  - levelNumber: 
+    levelCoinReward: 0
+  - levelNumber: 0
     scoreToWin: 0
     gameSpeed: 0
     levelTimerInSeconds: 0
-  - levelNumber: 
+    levelCoinReward: 0
+  - levelNumber: 0
     scoreToWin: 0
     gameSpeed: 0
     levelTimerInSeconds: 0
-  - levelNumber: 
+    levelCoinReward: 0
+  - levelNumber: 0
     scoreToWin: 0
     gameSpeed: 0
     levelTimerInSeconds: 0
-  - levelNumber: 
+    levelCoinReward: 0
+  - levelNumber: 0
     scoreToWin: 0
     gameSpeed: 0
     levelTimerInSeconds: 0
-  - levelNumber: 
+    levelCoinReward: 0
+  - levelNumber: 0
     scoreToWin: 0
     gameSpeed: 0
     levelTimerInSeconds: 0
-  - levelNumber: 
+    levelCoinReward: 0
+  - levelNumber: 0
     scoreToWin: 0
     gameSpeed: 0
     levelTimerInSeconds: 0
-  - levelNumber: 
-    scoreToWin: 0
-    gameSpeed: 0
-    levelTimerInSeconds: 0
-  - levelNumber: 
-    scoreToWin: 0
-    gameSpeed: 0
-    levelTimerInSeconds: 0
+    levelCoinReward: 0

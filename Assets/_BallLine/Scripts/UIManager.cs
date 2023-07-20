@@ -176,6 +176,7 @@ namespace BallLine
         public void StartGame()
         {
             GameManager.Instance.StartGame();
+            LevelChooseBtn.SetActive(false);
         }
 
 
@@ -186,14 +187,20 @@ namespace BallLine
           
         }
 
+        
+        
         public void EndGame()
-        {
+        {   
+            
+            PlayerController.Instance.Die();
             GameManager.Instance.GameOver();
+          
         }
 
         public void RestartGame()
         {
             GameManager.Instance.RestartGame(0.2f);
+            LevelChooseBtn.SetActive(false);
         }
 
         public void ShowStartUI()
