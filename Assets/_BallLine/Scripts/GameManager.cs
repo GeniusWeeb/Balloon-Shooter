@@ -19,7 +19,7 @@ namespace BallLine
     {
         WIN ,
         LOSE ,
-        NUlL
+        NULL
     }
 
     public enum CoinEarned
@@ -333,11 +333,8 @@ namespace BallLine
             yield return new WaitForSeconds(time);
            
         }
-
-
         public void PlayNextLevel()
         {
-           
             if (playerController.levelSetupDone)
             {
                 Debug.LogError("Setup Is Done");
@@ -347,7 +344,6 @@ namespace BallLine
                 UIManager.Instance.playNextLevelUI.SetActive(false);
                
             }
-           
         }
     }
 }

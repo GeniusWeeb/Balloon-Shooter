@@ -21,6 +21,9 @@ namespace BallLine
 
         //public int scoreToPass = 200;
 
+        public  PerLevelDataManager GetLevelManager => thisLevelManager;
+        
+
         public bool IsUnlocked
         {
             get
