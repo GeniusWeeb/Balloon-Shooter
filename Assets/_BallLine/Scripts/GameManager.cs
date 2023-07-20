@@ -340,12 +340,7 @@ namespace BallLine
             yield return new WaitForSeconds(time);
             UIManager.Instance.playNextLevelUI.SetActive(false);
             // this is the main identifier
-            playerController.instantiateNewLevel(currentPlayingLevel.levelSequenceNumber+1);
-            
-            // not this , this is to store the currently played level in playerpref and this should be the highest level
-            LevelManager.Instance.CurrentLevelIndex = currentPlayingLevel.levelSequenceNumber;
-            Debug.LogError("current Level Index" + currentLevelIndex);
-            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+            StartPlayLevel();
            
         }
         public void PlayNextLevel()
@@ -353,11 +348,21 @@ namespace BallLine
             if (playerController.levelSetupDone)
             {
                 Debug.LogError("Setup Is Done");
-             
                 StartCoroutine(SampleDelay(1f));
             }
         }
+
+
+        public void StartPlayLevel()
+        {
+            playerController.instantiateNewLevel(currentPlayingLevel.levelSequenceNumber+1);
+            // not this , this is to store the currently played level in playerpref and this should be the highest level
+            LevelManager.Instance.CurrentLevelIndex = currentPlayingLevel.levelSequenceNumber;
+            Debug.LogError("current Level Index" + currentLevelIndex);
+            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+        }
         
+
         private void AutoUnlockNewLevel()
         {
             LevelManager.Instance.Levels[currentPlayingLevel.levelSequenceNumber + 1].GetComponent<Level>().Unlock(false , true);
@@ -365,7 +370,6 @@ namespace BallLine
             // After you win , unlock new level 
 
         }
-
-
+        
     }
 }

@@ -35,8 +35,6 @@ namespace BallLine
             }
         }
         
-        
-
         void Awake()
         {
             AddLevelData();

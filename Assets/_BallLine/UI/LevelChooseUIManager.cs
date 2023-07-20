@@ -4,6 +4,7 @@ using BallLine;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class LevelChooseUIManager : MonoBehaviour
@@ -23,10 +24,19 @@ public class LevelChooseUIManager : MonoBehaviour
         foreach (var item in LevelManager.Instance.Levels)
         {
           GameObject levelPrefab =  Instantiate(levelSelectPrefab, transform.position, quaternion.identity, levelPanelContent);
-          levelPrefab.GetComponentInChildren<TextMeshProUGUI>().text =   item.GetComponent<Level>().levelName;
+          var levelName = levelPrefab.GetComponentInChildren<TextMeshProUGUI>().text =   item.GetComponent<Level>().levelName;
           levelPrefab.GetComponent<Button>().interactable = item.GetComponent<Level>().IsUnlocked;
+          
+          levelPrefab.GetComponent<Button>().onClick.AddListener(() =>
+          {
+              
+           UIManager.Instance.PlaySelectedLevel(levelName);
+              
+          });
         }
     }
+
+   
 
     public void CloseThis()
     {

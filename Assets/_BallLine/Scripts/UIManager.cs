@@ -589,5 +589,23 @@ namespace BallLine
         {
             return PremiumFeaturesManager.Instance != null && PremiumFeaturesManager.Instance.enablePremiumFeatures;
         }
+
+
+
+        public void PlaySelectedLevel(string levelName)
+        {
+            foreach (var lev in LevelManager.Instance.Levels)
+            {
+                if (lev.GetComponent<Level>().levelName.Equals(levelName))
+                {
+                    int seqNumber = lev.GetComponent<Level>().levelSequenceNumber;
+                    Debug.LogError("Loading level " + seqNumber);
+                    LevelManager.Instance.CurrentLevelIndex = seqNumber;
+                    SceneManager.LoadSceneAsync("SGameplay");
+                    
+                }
+            } 
+         
+        }
     }
 }
