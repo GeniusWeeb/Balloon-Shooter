@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -44,6 +45,7 @@ namespace BallLine
 
         public Material lineRenderMaterial;
 
+        public bool levelSetupDone = false;
         public bool shoot;
         public bool isDie;
         public bool isPlay;
@@ -105,8 +107,14 @@ namespace BallLine
         }
 
         void Start()
-        {
+        {  
             // Setup
+            Init();
+
+        }
+
+      public  void Init()
+        {
             instantiateNewLevel(LevelManager.Instance.CurrentLevelIndex);
             SetBackGround(BackGroundManager.Instance.CurrentBackGroundIndex);
             line = GetComponent<LineRenderer>();
@@ -121,6 +129,7 @@ namespace BallLine
 
         public void instantiateNewLevel(int levelID)
         {
+            levelSetupDone = false;
             if (level != null)
                 Destroy(level);
             level = (GameObject)Instantiate(LevelManager.Instance.levelTests[levelID].level, planePosition.position, Quaternion.Euler(0, 0, 0));
@@ -164,6 +173,8 @@ namespace BallLine
                     break;
                 }
             }
+
+            levelSetupDone = true;
         }
 
         //Start new coroutine to create a new loop to create ball

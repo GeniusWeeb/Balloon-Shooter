@@ -28,8 +28,8 @@ MonoBehaviour:
     gameSpeed: 1
     levelTimerInSeconds: 0
     levelCoinReward: 310
-  - levelNumber: 0
-    scoreToWin: 0
+  - levelNumber: 4
+    scoreToWin: 14
     gameSpeed: 0
     levelTimerInSeconds: 0
     levelCoinReward: 0

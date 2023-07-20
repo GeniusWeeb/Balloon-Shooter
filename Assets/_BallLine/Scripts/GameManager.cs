@@ -135,6 +135,7 @@ namespace BallLine
         public PlayerController playerController;
         public GameObject mainCanvas;
         public GameObject characterUI;
+        private ObjectPooling currentPooledObjects;
 
         void OnEnable()
         {
@@ -168,6 +169,8 @@ namespace BallLine
                 DestroyImmediate(Instance.gameObject);
                 Instance = this;
             }
+
+            currentPooledObjects = this.GetComponent<ObjectPooling>();
         }
 
         void OnDestroy()
@@ -182,6 +185,7 @@ namespace BallLine
         void Start()
         {
             // Initial setup
+            
             Application.targetFrameRate = targetFrameRate;
             ScoreManager.Instance.Reset();
             PrepareGame();
@@ -193,6 +197,10 @@ namespace BallLine
             if (currentGameResult == GameResult.WIN)
             {
                 Debug.LogError("You win");
+                UIManager.Instance.playNextLevelUI.SetActive(true);
+                speedUp = 10f;
+                playerController.StartSpeedUp();
+                GameOver();
             }
             else
             {  
@@ -207,6 +215,8 @@ namespace BallLine
         // Listens to the event when player dies and call GameOver
         void PlayerController_PlayerDied()
         {
+            if (_gameState == GameState.GameOver)
+                return;
             CheckGameWinLoss(GameResult.LOSE);
             GameOver();
         }
@@ -227,13 +237,14 @@ namespace BallLine
         // A new game official starts
         public void StartGame()
         {
+          
             GameState = GameState.Playing;
             if (SoundManager.Instance.background != null)
             {
                 SoundManager.Instance.PlayMusic(SoundManager.Instance.background);
             }
 
-            currentLevelIndex = LevelManager.Instance.CurrentLevelIndex +1 ;
+          //  currentLevelIndex = LevelManager.Instance.CurrentLevelIndex +1 ;
         }
 
         // Called when the player died
@@ -247,15 +258,9 @@ namespace BallLine
             SoundManager.Instance.PlaySound(SoundManager.Instance.gameOver);
             GameState = GameState.GameOver;
             GameCount++;
-
             // Add other game over actions here if necessary
         }
-
-
-        public void OnGameWinOve(GameResult result)
-        {
-            currentGameResult = result;
-        }
+        
 
         // Start a new game
         public void RestartGame(float delay = 0)
@@ -321,6 +326,28 @@ namespace BallLine
                 Invoke("StopSpeedUp", timeSpeedUp * Time.timeScale);
             }
 
+        }
+    
+        IEnumerator SampleDelay(float time)
+        {
+            yield return new WaitForSeconds(time);
+           
+        }
+
+
+        public void PlayNextLevel()
+        {
+           
+            if (playerController.levelSetupDone)
+            {
+                Debug.LogError("Setup Is Done");
+                currentPooledObjects.DestroyPoolObject();
+                currentPooledObjects.PoolingObject(CharacterManager.Instance.CurrentCharacterIndex);
+                StartCoroutine(SampleDelay(1f));
+                UIManager.Instance.playNextLevelUI.SetActive(false);
+                StartGame();
+            }
+           
         }
     }
 }
