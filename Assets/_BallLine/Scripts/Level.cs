@@ -61,9 +61,7 @@ namespace BallLine
 
             return false;
         }
-
-
-
+        
         public void AddLevelData()
         {
             foreach (levelParameters  level in thisLevelManager.level  )

@@ -8,10 +8,7 @@ public class PerLevelDataManager : ScriptableObject
 {
 
     public List<levelParameters> level;
-
-
-
-
+    
     public levelParameters GetLevelFinalData()
     {
         return new levelParameters();

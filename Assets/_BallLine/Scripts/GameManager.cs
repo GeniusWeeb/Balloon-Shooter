@@ -345,7 +345,7 @@ namespace BallLine
             {
                 Debug.LogError("Setup Is Done");
              
-                StartCoroutine(SampleDelay(1f));
+                StartCoroutine(SampleDelay(1f));             
                 UIManager.Instance.playNextLevelUI.SetActive(false);
                 playerController.instantiateNewLevel(currentPlayingLevel.levelSequenceNumber+1);
                 LevelManager.Instance.CurrentLevelIndex = currentPlayingLevel.levelSequenceNumber;

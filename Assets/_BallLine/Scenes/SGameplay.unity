@@ -9960,6 +9960,11 @@ PrefabInstance:
       objectReference: {fileID: 117626527}
     - target: {fileID: 2957127496902929852, guid: 9101f332a531e4ea7a6372b8c9b62f95,
         type: 3}
+      propertyPath: moveBallSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2957127496902929852, guid: 9101f332a531e4ea7a6372b8c9b62f95,
+        type: 3}
       propertyPath: playerController
       value: 
       objectReference: {fileID: 344953820}
