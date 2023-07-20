@@ -1,4 +1,5 @@
 ﻿using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace BallLine
@@ -14,8 +15,9 @@ namespace BallLine
         public int scoreToWin;
         public float  levelSpeed;
         public float levelTimerInSeconds;
-        public int levelCoinRewards; 
-        private string levelString = "LEVEL";
+        public int levelCoinRewards;  
+        private string levelString = "LEVEL"; 
+       [SerializeField] private bool isUnlockedAndPlayable; 
         [SerializeField] private PerLevelDataManager thisLevelManager; 
         //***uncomment the cobe below to use pass level when enough score feature
 
@@ -23,7 +25,8 @@ namespace BallLine
 
         public  PerLevelDataManager GetLevelManager => thisLevelManager;
         
-
+        
+        // call this to  check      
         public bool IsUnlocked
         {
             get
@@ -31,30 +34,55 @@ namespace BallLine
                 return (isFree || PlayerPrefs.GetInt(levelName, 0) == 1);
             }
         }
+        
+        
 
         void Awake()
         {
             AddLevelData();
             levelInitEvent.Invoke(this.gameObject);
-            
+
         }
 
-        public bool Unlock(bool isDefault=false)
+        private void Start()
+        {
+            if (levelSequenceNumber == 0)
+            {
+                isUnlockedAndPlayable = true;
+                isFree = true;
+            }
+            
+            if(IsUnlocked)
+            {
+                isUnlockedAndPlayable = true;
+            }
+        }
+
+        public bool Unlock(bool isDefault=false , bool forceUnlock = false )
         {
             if (IsUnlocked)
-                return true;
-            if(isDefault)
             {
-                PlayerPrefs.SetInt(levelName, 1);
-                PlayerPrefs.Save();
-
+                var levelNo= levelSequenceNumber + 1;
+                Debug.LogError("Already unlocked  " + levelNo);
                 return true;
             }
-            if (CoinManager.Instance.Coins >= price)
+           
+            if (CoinManager.Instance.Coins >= price || forceUnlock)
             {
                 PlayerPrefs.SetInt(levelName, 1);
                 PlayerPrefs.Save();
                 CoinManager.Instance.RemoveCoins(price);
+                var levelNo= levelSequenceNumber + 1;
+                Debug.LogError(" unlocked NEW LEVEL  " + levelNo);
+                //levelName =  "LEVEL" + sequence number
+
+                return true;
+            }
+            if(isDefault)
+            {
+                PlayerPrefs.SetInt(levelName, 1);
+                PlayerPrefs.Save();
+                
 
                 return true;
             }

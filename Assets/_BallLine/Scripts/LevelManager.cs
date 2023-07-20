@@ -46,5 +46,13 @@ namespace BallLine
                 DontDestroyOnLoad(gameObject);
             }
         }
+        
+        //Called Automatically after winning a gam
+        //
+        //Highest Unlocked LevelIndex -> Index means always  value -1 
+        public void OnWinUnlockNewLevel()
+        {
+            
+        }
     }
 }
