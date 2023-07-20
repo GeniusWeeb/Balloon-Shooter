@@ -337,6 +337,10 @@ namespace BallLine
         IEnumerator SampleDelay(float time)
         {
             yield return new WaitForSeconds(time);
+            UIManager.Instance.playNextLevelUI.SetActive(false);
+            playerController.instantiateNewLevel(currentPlayingLevel.levelSequenceNumber+1);
+            LevelManager.Instance.CurrentLevelIndex = currentPlayingLevel.levelSequenceNumber;
+            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
            
         }
         public void PlayNextLevel()
@@ -345,15 +349,7 @@ namespace BallLine
             {
                 Debug.LogError("Setup Is Done");
              
-                StartCoroutine(SampleDelay(1f));             
-                UIManager.Instance.playNextLevelUI.SetActive(false);
-                playerController.instantiateNewLevel(currentPlayingLevel.levelSequenceNumber+1);
-                LevelManager.Instance.CurrentLevelIndex = currentPlayingLevel.levelSequenceNumber;
-
-                SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
-
-
-
+                StartCoroutine(SampleDelay(1f));
             }
         }
     }
