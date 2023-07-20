@@ -1307,8 +1307,7 @@ namespace BallLine
                 {
                         Move();
                 }
-                else
-                if (isMovingBack && !move && isMoveBack && !die)
+                else if (isMovingBack && !move && isMoveBack && !die)
                 {
                         MoveBackLeader();
                 }

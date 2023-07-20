@@ -345,7 +345,7 @@ namespace BallLine
                 currentPooledObjects.PoolingObject(CharacterManager.Instance.CurrentCharacterIndex);
                 StartCoroutine(SampleDelay(1f));
                 UIManager.Instance.playNextLevelUI.SetActive(false);
-                StartGame();
+               
             }
            
         }

@@ -147,7 +147,7 @@ namespace BallLine
             scoreAnimator.Play("NewScore");
         }
 
-        void Reset()
+       public void Reset()
         {
             mainCanvas.SetActive(true);
             characterSelectionUI.SetActive(false);
@@ -158,6 +158,7 @@ namespace BallLine
             playBtn.SetActive(false);
             menuButtons.SetActive(false);
             dailyRewardBtn.SetActive(false);
+            restartBtn.SetActive(false);
 
             // Enable or disable premium stuff
             bool enablePremium = IsPremiumFeaturesEnabled();
