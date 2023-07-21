@@ -73,3 +73,8 @@ MonoBehaviour:
     gameSpeed: 0
     levelTimerInSeconds: 0
     levelCoinReward: 0
+  - levelNumber: 12
+    scoreToWin: 0
+    gameSpeed: 0
+    levelTimerInSeconds: 0
+    levelCoinReward: 0

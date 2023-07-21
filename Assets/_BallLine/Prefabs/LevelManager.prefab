@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3652524890900130510}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.8829994, y: 22.880001, z: 18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -56,6 +56,11 @@ MonoBehaviour:
   - {fileID: 1549620316084040, guid: 3732f409d6dcc0846a221cc124e4850b, type: 3}
   - {fileID: 1479065663046034, guid: 3f22ba30adb5c0447b70c14bee709769, type: 3}
   - {fileID: 1479065663046034, guid: 96e499b39df97495fab11ee70f7d044e, type: 3}
+  - {fileID: 1479065663046034, guid: 24430e4c16e264407a0857c2760d0a1c, type: 3}
+  - {fileID: 1479065663046034, guid: 9c38942cadd954f7c854a8ce36edd088, type: 3}
+  - {fileID: 1479065663046034, guid: 7a2bdc3b630e94d6c9291a40e7244a8e, type: 3}
+  - {fileID: 1479065663046034, guid: 4284dd18cb4a6433eb716fc1ef2a87d0, type: 3}
+  - {fileID: 1479065663046034, guid: a9116b7d2cbd34b1ba1f6387601096ed, type: 3}
   levelTests:
   - level: {fileID: 1781843933138104, guid: abd39ff6c734cc348b37eb8b6fc12caa, type: 3}
     levelImage: {fileID: 21300000, guid: dcf17ec8afd36114da4e01b48a2f01fc, type: 3}
@@ -79,3 +84,13 @@ MonoBehaviour:
     levelImage: {fileID: 21300000, guid: 581a689d141594e408f70341952a9213, type: 3}
   - level: {fileID: 1479065663046034, guid: 96e499b39df97495fab11ee70f7d044e, type: 3}
     levelImage: {fileID: 21300000, guid: f37456017033040988ce9337d42259c4, type: 3}
+  - level: {fileID: 1479065663046034, guid: 24430e4c16e264407a0857c2760d0a1c, type: 3}
+    levelImage: {fileID: 0}
+  - level: {fileID: 1479065663046034, guid: 9c38942cadd954f7c854a8ce36edd088, type: 3}
+    levelImage: {fileID: 0}
+  - level: {fileID: 1479065663046034, guid: 7a2bdc3b630e94d6c9291a40e7244a8e, type: 3}
+    levelImage: {fileID: 0}
+  - level: {fileID: 1479065663046034, guid: 4284dd18cb4a6433eb716fc1ef2a87d0, type: 3}
+    levelImage: {fileID: 0}
+  - level: {fileID: 1479065663046034, guid: a9116b7d2cbd34b1ba1f6387601096ed, type: 3}
+    levelImage: {fileID: 0}
