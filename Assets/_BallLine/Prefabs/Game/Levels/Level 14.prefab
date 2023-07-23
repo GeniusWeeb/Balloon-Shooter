@@ -1139,7 +1139,7 @@ MonoBehaviour:
   levelSequenceNumber: 13
   levelName: LEVEL14
   price: 200
-  isFree: 1
+  isFree: 0
   scoreToWin: 0
   levelSpeed: 0
   levelTimerInSeconds: 0
