@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 namespace BallLine
 {
@@ -35,6 +36,8 @@ namespace BallLine
         private void Start()
         {
             currentCharacterID = CharacterManager.Instance.CurrentCharacterIndex;
+            if(!SceneManager.GetActiveScene().name.Equals(SceneNames.SGameplay.ToString()))
+              return;
             PoolingObject(currentCharacterID);
         }
 

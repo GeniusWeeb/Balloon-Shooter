@@ -323,6 +323,7 @@ namespace BallLine
         IEnumerator CRRestartGame(float delay = 0)
         {
             yield return new WaitForSeconds(delay);
+            LevelManager.Instance.CurrentLevelIndex -=1 ;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
