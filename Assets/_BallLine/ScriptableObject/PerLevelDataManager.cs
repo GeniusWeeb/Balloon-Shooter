@@ -9,15 +9,13 @@ public class PerLevelDataManager : ScriptableObject
 
     public List<levelParameters> level;
     
-    public levelParameters GetLevelFinalData()
-    {
-        return new levelParameters();
-    }
+
 }
 
 [System.Serializable]
 public class levelParameters
-{
+{   
+    public bool isFree ; 
     public int levelNumber;
     public int scoreToWin;
     public float gameSpeed;

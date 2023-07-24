@@ -71,7 +71,8 @@ namespace BallLine
         private void  CheckWinCondition()
         {
             if (Score > GameManager.Instance.currentPlayingLevel.scoreToWin)
-            {
+            {   
+                Debug.Log("Checking Win Loss");
                 GameManager.GameOverWithResult.Invoke(GameResult.WIN);
             } 
         }

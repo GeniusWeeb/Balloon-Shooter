@@ -599,7 +599,9 @@ namespace BallLine
                 if (lev.GetComponent<Level>().levelName.Equals(levelName))
                 {
                     int seqNumber = lev.GetComponent<Level>().levelSequenceNumber;
-                    Debug.LogError("Loading level " + seqNumber);
+                    int loadedLevel =  seqNumber +1 ;
+                    //sequence number is like index number , actual value is loaded level  =  index value +1 
+                    Debug.LogError("Loading level " + loadedLevel);
                     LevelManager.Instance.CurrentLevelIndex = seqNumber;
                     SceneManager.LoadSceneAsync("SGameplay");
                     

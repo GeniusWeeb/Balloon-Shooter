@@ -29,6 +29,13 @@ namespace BallLine
         IncreaseEachCombo
     }
 
+    public  enum SceneNames
+    {
+        Main ,
+        SGameplay 
+
+    }
+
     public class GameManager : MonoBehaviour
     {
 
@@ -137,6 +144,11 @@ namespace BallLine
         public GameObject characterUI;
         private ObjectPooling currentPooledObjects;
 
+
+
+        [Header("Level Data Scripttable")]
+        [SerializeField]private PerLevelDataManager levelDataManager;
+
         void OnEnable()
         {
             GameOverWithResult += CheckGameWinLoss;
@@ -188,9 +200,41 @@ namespace BallLine
             
             Application.targetFrameRate = targetFrameRate;
             ScoreManager.Instance.Reset();
+        
+            SetUpLevelDifficulty();
             Debug.LogError("Starting game");
             PrepareGame();
         }
+
+
+
+    //this is done with a different reference,  Since at this the point the level script may not be initialised
+    //Hence we pull reference directly from the scriptable object
+
+    //NOTE : We should define the prefab link in scriptable object instad of the LevelManager as that is a better approach and if are not necassrily relyig on Level
+    //Manager being in the Scene , we can have in ASSET instnace of the  "PerLevelDataManager" Scriptable Object  and pull all the Level prefabs from there instead
+        private void SetUpLevelDifficulty()
+        {
+           if(!SceneManager.GetActiveScene().name.Equals(SceneNames.SGameplay.ToString()))
+           return;
+            Debug.LogError("GamePLay Scene");
+
+
+            foreach(var lev in levelDataManager.level)
+            {
+                if(LevelManager.Instance.CurrentLevelIndex+1 == lev.levelNumber)
+                {
+                    Debug.Log("We are playing level" + lev.levelNumber);
+                    moveBallSpeed = lev.gameSpeed ;
+                    
+                }
+            }
+  
+            
+    
+        }
+
+     
 
         private void CheckGameWinLoss(GameResult result)
         {

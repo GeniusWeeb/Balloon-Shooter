@@ -17,6 +17,8 @@ namespace BallLine
         public float levelTimerInSeconds;
         public int levelCoinRewards;  
         private string levelString = "LEVEL"; 
+
+        public bool levelSetupDone =  false ;
        [SerializeField] private bool isUnlockedAndPlayable; 
         [SerializeField] private PerLevelDataManager thisLevelManager; 
         //***uncomment the cobe below to use pass level when enough score feature
@@ -24,7 +26,11 @@ namespace BallLine
         //public int scoreToPass = 200;
 
         public  PerLevelDataManager GetLevelManager => thisLevelManager;
-        
+
+        #region Setting up Level data Action
+
+      
+        #endregion
         
         // call this to  check      
         public bool IsUnlocked
@@ -37,16 +43,24 @@ namespace BallLine
         
         void Awake()
         {
-            AddLevelData();
+            //Just raises and event when this gameobject is ready
             levelInitEvent.Invoke(this.gameObject);
 
         }
 
         private void Start()
-        {
+        {   
+             levelSetupDone =  false ;
             Init();
+        
         }
 
+
+       void OnEnable()
+       { 
+        AddLevelData();
+
+       }
 
         void Init()
         {
@@ -107,6 +121,8 @@ namespace BallLine
                     this.levelCoinRewards = level.levelCoinReward;
                     this.levelSpeed = level.gameSpeed;
                 }
+
+                levelSetupDone =  true ;
             }
         }
     }
