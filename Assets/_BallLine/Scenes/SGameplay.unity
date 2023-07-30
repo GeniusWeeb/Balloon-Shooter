@@ -9886,6 +9886,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2700173992571738101}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2700173992571738106 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5817348214233976924, guid: bdc8005ad6da2ed4ab47962a83aab172,
+    type: 3}
+  m_PrefabInstance: {fileID: 2700173992571738101}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2957127494953408479
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10071,6 +10077,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4832591235028430720, guid: 5518b79e56eb341faae7b663c6821568,
         type: 3}
+      propertyPath: Bg
+      value: 
+      objectReference: {fileID: 2700173992571738106}
+    - target: {fileID: 4832591235028430720, guid: 5518b79e56eb341faae7b663c6821568,
+        type: 3}
       propertyPath: score
       value: 
       objectReference: {fileID: 1311121417}
@@ -10229,6 +10240,18 @@ PrefabInstance:
       propertyPath: gridViewScroller
       value: 
       objectReference: {fileID: 1450570156}
+    - target: {fileID: 4832591235028430720, guid: 5518b79e56eb341faae7b663c6821568,
+        type: 3}
+      propertyPath: resstartWinSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3fde019baf3e24305b27574735e535e0,
+        type: 3}
+    - target: {fileID: 4832591235028430720, guid: 5518b79e56eb341faae7b663c6821568,
+        type: 3}
+      propertyPath: restartLoseSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 20338c9bc492b48b4b09cd7a0a457791,
+        type: 3}
     - target: {fileID: 4832591235028430720, guid: 5518b79e56eb341faae7b663c6821568,
         type: 3}
       propertyPath: shareUIController

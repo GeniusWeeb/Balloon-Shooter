@@ -16,7 +16,7 @@ MonoBehaviour:
   - isFree: 0
     levelNumber: 1
     scoreToWin: 5
-    gameSpeed: 4
+    gameSpeed: 10
     levelTimerInSeconds: 0
     levelCoinReward: 0
   - isFree: 0
@@ -52,7 +52,7 @@ MonoBehaviour:
   - isFree: 0
     levelNumber: 7
     scoreToWin: 10
-    gameSpeed: 2
+    gameSpeed: 10
     levelTimerInSeconds: 0
     levelCoinReward: 0
   - isFree: 0

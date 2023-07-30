@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace BallLine
 {
@@ -243,6 +244,7 @@ namespace BallLine
             {
                 Debug.LogError("You win");
                 UIManager.Instance.playNextLevelUI.SetActive(true);
+                UIManager.Instance.restartBtn.GetComponent<Image>().sprite = UIManager.Instance.resstartWinSprite;
                 speedUp = 200f;
                 playerController.StartSpeedUp();
                 GameOver();
@@ -251,6 +253,7 @@ namespace BallLine
             }
             else
             {  
+                UIManager.Instance.restartBtn.GetComponent<Image>().sprite = UIManager.Instance.restartLoseSprite;
                 Debug.LogError("You lose");
 
             }

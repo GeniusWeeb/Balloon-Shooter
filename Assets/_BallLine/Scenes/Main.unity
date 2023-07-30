@@ -350,6 +350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelChooseUI: {fileID: 2700173992571738102}
+  Bg: {fileID: 838182207}
   LevelChooseBtn: {fileID: 41923540}
   winText: {fileID: 0}
   loseText: {fileID: 0}
@@ -2362,6 +2363,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87d32f82f7fb6405d929088046ec6ecb, type: 3}
+--- !u!1 &838182207 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5817348214233976924, guid: bdc8005ad6da2ed4ab47962a83aab172,
+    type: 3}
+  m_PrefabInstance: {fileID: 2700173992571738101}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &869766375
 GameObject:
   m_ObjectHideFlags: 0
@@ -5506,6 +5513,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 218131795}
+    - target: {fileID: 133463963982345646, guid: bdc8005ad6da2ed4ab47962a83aab172,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -42.900024
+      objectReference: {fileID: 0}
+    - target: {fileID: 133463963982345646, guid: bdc8005ad6da2ed4ab47962a83aab172,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -41.899902
+      objectReference: {fileID: 0}
     - target: {fileID: 224074319557131078, guid: bdc8005ad6da2ed4ab47962a83aab172,
         type: 3}
       propertyPath: m_AnchoredPosition.x

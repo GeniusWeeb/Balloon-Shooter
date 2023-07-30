@@ -14,9 +14,14 @@ namespace BallLine
     public class UIManager : MonoBehaviour
     {
         public static UIManager Instance;
+
+        public Sprite resstartWinSprite ;
+        public Sprite restartLoseSprite ;
         
         [Header("Object References")]
         public GameObject LevelChooseUI;
+        
+        public GameObject Bg ; 
 
         public GameObject LevelChooseBtn;
         public GameObject winText; 
@@ -240,8 +245,8 @@ namespace BallLine
                     title.SetActive(true);
                     playBtn.SetActive(true);
                     menuButtons.SetActive(true);
-                    dailyRewardBtn.SetActive(true);
-                    watchRewardedAdBtn.SetActive(true);
+                 //   dailyRewardBtn.SetActive(true);
+                 //   watchRewardedAdBtn.SetActive(true);
                     break;
                 case "SGameplay":
                     Debug.LogError("Showing Gameplay UI");
@@ -251,6 +256,7 @@ namespace BallLine
                     menuButtons.SetActive(false);
                     dailyRewardBtn.SetActive(false);
                     watchRewardedAdBtn.SetActive(false);
+                    UIManager.Instance.Bg.SetActive(false );
                     
                     break;
             }
