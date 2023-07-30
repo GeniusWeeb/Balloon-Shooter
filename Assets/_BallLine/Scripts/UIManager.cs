@@ -242,7 +242,7 @@ namespace BallLine
             {
                 case "Main":
                     header.SetActive(true);
-                    title.SetActive(true);
+                   // title.SetActive(true);
                     playBtn.SetActive(true);
                     menuButtons.SetActive(true);
                  //   dailyRewardBtn.SetActive(true);
@@ -432,6 +432,12 @@ namespace BallLine
         // Give the coins!
         ShowRewardUI(AdDisplayer.Instance.rewardedCoins);
             #endif
+        }
+
+        public void GoHomeScreen()
+        {
+
+            SceneManager.LoadSceneAsync("Main");
         }
 
         public void GrabDailyReward()

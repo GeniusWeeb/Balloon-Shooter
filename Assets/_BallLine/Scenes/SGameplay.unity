@@ -9760,6 +9760,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2885151477438214669, guid: bdc8005ad6da2ed4ab47962a83aab172,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 218131795}
+    - target: {fileID: 2885151477438214669, guid: bdc8005ad6da2ed4ab47962a83aab172,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoHomeScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 2885151477438214669, guid: bdc8005ad6da2ed4ab47962a83aab172,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BallLine.UIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2885151477438214669, guid: bdc8005ad6da2ed4ab47962a83aab172,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3332070180204373120, guid: bdc8005ad6da2ed4ab47962a83aab172,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
